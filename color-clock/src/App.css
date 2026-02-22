@@ -1,0 +1,33 @@
+.clock-wrapper {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* A vibrant gradient background */
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  margin: 0;
+}
+
+.clock-display {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 50px;
+  border-radius: 30px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  text-align: center;
+  color: #ffffff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+.clock-display h1 {
+  font-size: 5rem;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+.clock-display p {
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin-top: 10px;
+}
