@@ -1,26 +1,27 @@
 import React, { useState, useEffect } from 'react';
-import { format } from 'date-fns';
+import { format } from 'date-fns'; // Importing the required library
 import './App.css';
 
 function App() {
-  // Initialize state with the current date
-  const [now, setNow] = useState(new Date());
+  // 1. Create a state variable to hold the current time
+  const [currentTime, setCurrentTime] = useState(new Date());
 
+  // 2. Use useEffect to create a timer when the component loads
   useEffect(() => {
-    // Set up an interval to update the state every second
     const timer = setInterval(() => {
-      setNow(new Date());
+      setCurrentTime(new Date()); // Update the time every second
     }, 1000);
 
-    // Clean up the interval when the component unmounts
+    // 3. Cleanup the timer if the component is removed
     return () => clearInterval(timer);
   }, []);
 
   return (
-    <div className="clock-container">
-      <div className="clock-card">
-        <h1>{format(now, 'hh:mm:ss a')}</h1>
-        <p>{format(now, 'EEEE, MMMM do, yyyy')}</p>
+    <div className="clock-wrapper">
+      <div className="clock-display">
+        {/* Using date-fns to format the time and date string */}
+        <h1>{format(currentTime, 'hh:mm:ss a')}</h1>
+        <p>{format(currentTime, 'EEEE, MMMM do, yyyy')}</p>
       </div>
     </div>
   );
