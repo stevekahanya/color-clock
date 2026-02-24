@@ -12,3 +12,5 @@ A dynamic, colorful digital clock built with React, Vite, and date-fns.
 2. **Install dependencies**:
    ```bash
    npm install
+
+  
